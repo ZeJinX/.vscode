@@ -1,0 +1,26 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "Zeke Web Application ",
+    "owner": "Zeke ",
+    "description": "StellarPay Digital Banking is a fast-growing fintech company that is developing a web-based digital payment platform to provide secure and seamless financial transactions for its customers. This platform will enable users to create accounts, link bank cards, send and receive money, pay for goods and services, and manage their financial transactions in real time.\n\nDue to the handling of sensitive financial data, including personal identification details, bank account information, transaction logs, and API communications with payment gateways, StellarPay is prioritising security before launching the platform. The company has decided to conduct a threat modelling exercise to proactively identify and mitigate potential cyber threats before deployment.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": []
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Eduvos",
+    "threatTop": 0
+  }
+}
