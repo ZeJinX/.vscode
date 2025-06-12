@@ -1303,6 +1303,168 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "admin command",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "admin command"
+            ],
+            "id": "8a5bdecf-9fda-452f-b665-dffc5daeed2e",
+            "source": {
+              "x": 137,
+              "y": 400
+            },
+            "target": {
+              "x": 660,
+              "y": 30
+            },
+            "vertices": [
+              {
+                "x": 380,
+                "y": 260
+              },
+              {
+                "x": 440,
+                "y": 120
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "view transaction logs",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "view transaction logs"
+            ],
+            "id": "f7b80874-b1b3-4f09-bc57-c63a9f5c4e93",
+            "source": {
+              "x": 142,
+              "y": 400
+            },
+            "target": {
+              "cell": "eecad40d-3463-4154-b0f1-ff4f12e6ef8b",
+              "port": "34c72e76-e793-4848-98a9-808a3218afca"
+            },
+            "vertices": [
+              {
+                "x": 790,
+                "y": 590
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "audit log access",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "audit log access"
+            ],
+            "id": "9de0aabc-273b-4b3c-9329-e16dfbb75ae0",
+            "source": {
+              "x": 135,
+              "y": 400
+            },
+            "target": {
+              "cell": "1d67bf03-1162-459b-ac89-58162d4776aa",
+              "port": "34c72e76-e793-4848-98a9-808a3218afca"
+            },
+            "vertices": [
+              {
+                "x": 680,
+                "y": 350
+              },
+              {
+                "x": 760,
+                "y": 350
+              },
+              {
+                "x": 980,
+                "y": 370
+              }
+            ]
+          },
+          {
             "position": {
               "x": 400,
               "y": 210
@@ -1864,6 +2026,13 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           }
         ]
