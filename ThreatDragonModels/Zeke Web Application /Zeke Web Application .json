@@ -19,6 +19,90 @@
         "cells": [
           {
             "position": {
+              "x": 667,
+              "y": 15.000000000000156
+            },
+            "size": {
+              "width": 130,
+              "height": 100
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "3378c1b1-890b-4bf8-969b-685792729308",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 474,
+              "y": 195.00000000000023
+            },
+            "size": {
+              "width": 190,
+              "height": 140
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "2950373b-a44e-4672-821d-df173233a018",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 843,
+              "y": 170.00000000000006
+            },
+            "size": {
+              "width": 130,
+              "height": 130
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "ae8cfe6b-2202-4c1d-9ec5-ee564017d559",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 713,
+              "y": 385
+            },
+            "size": {
+              "width": 130,
+              "height": 150
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "b72fe6db-01e1-4e51-9c7f-857ae30480a2",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
               "x": 10,
               "y": 20
             },
@@ -786,56 +870,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "LOGIN REQUEST",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "LOGIN REQUEST"
-            ],
-            "id": "d6ea953c-8258-4104-9682-23b3f949fccb",
-            "source": {
-              "x": 135,
-              "y": 400
-            },
-            "target": {
-              "x": 500,
-              "y": 290
-            },
-            "vertices": [
-              {
-                "x": 310,
-                "y": 350
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "SECUIRTY ALERTS ",
               "description": "",
               "outOfScope": false,
@@ -1019,6 +1053,10 @@
               {
                 "x": 570,
                 "y": 140
+              },
+              {
+                "x": 780,
+                "y": 210
               }
             ]
           },
@@ -1118,7 +1156,13 @@
             "target": {
               "x": 865,
               "y": 190
-            }
+            },
+            "vertices": [
+              {
+                "x": 840,
+                "y": 130
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1207,6 +1251,56 @@
               "cell": "eecad40d-3463-4154-b0f1-ff4f12e6ef8b",
               "port": "34c72e76-e793-4848-98a9-808a3218afca"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "LOGIN REQUEST",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "LOGIN REQUEST"
+            ],
+            "id": "d6ea953c-8258-4104-9682-23b3f949fccb",
+            "source": {
+              "x": 135,
+              "y": 400
+            },
+            "target": {
+              "x": 500,
+              "y": 290
+            },
+            "vertices": [
+              {
+                "x": 310,
+                "y": 350
+              }
+            ]
           },
           {
             "position": {
@@ -1492,8 +1586,8 @@
           },
           {
             "position": {
-              "x": 820,
-              "y": 175
+              "x": 828,
+              "y": 180.00000000000006
             },
             "size": {
               "width": 160,
@@ -1770,13 +1864,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           }
         ]
