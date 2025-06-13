@@ -28,8 +28,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "3378c1b1-890b-4bf8-969b-685792729308",
             "zIndex": -1,
+            "id": "3378c1b1-890b-4bf8-969b-685792729308",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -49,8 +49,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "2950373b-a44e-4672-821d-df173233a018",
             "zIndex": -1,
+            "id": "2950373b-a44e-4672-821d-df173233a018",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -70,8 +70,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "ae8cfe6b-2202-4c1d-9ec5-ee564017d559",
             "zIndex": -1,
+            "id": "ae8cfe6b-2202-4c1d-9ec5-ee564017d559",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -91,8 +91,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "b72fe6db-01e1-4e51-9c7f-857ae30480a2",
             "zIndex": -1,
+            "id": "b72fe6db-01e1-4e51-9c7f-857ae30480a2",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -122,6 +122,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -205,7 +206,6 @@
               ]
             },
             "id": "012028b1-a075-4b03-bd84-0761476b6158",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "CUSTOMERS",
@@ -214,7 +214,38 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "c49822b4-f522-42e6-a162-9d013f3a33fd",
+                  "title": "Threat 5",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "An attacker impersonates a customer to gain access.",
+                  "mitigation": "Multi-factor authentication (MFA), strong password policy",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "6"
+                },
+                {
+                  "id": "51bcfcc5-1e3b-476b-b0d8-fec0bc187afd",
+                  "title": "threat 6 ",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Attacker floods login endpoint, causing service outage.",
+                  "mitigation": "Rate limiting",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "4"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -238,6 +269,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -321,7 +353,6 @@
               ]
             },
             "id": "ea345450-4469-4849-9d99-76119118dfa6",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "BANK TELLERS",
@@ -330,7 +361,38 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "4495d5c2-e850-4999-9f5d-b59a20809074",
+                  "title": "Threat 7",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Teller actions are untraceable",
+                  "mitigation": "Audit logs with user IDs and timestamps",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "5"
+                },
+                {
+                  "id": "03c84b32-58ff-4b8d-b32a-9a951d246ef7",
+                  "title": " threat 8 ",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Unauthorized person logs in as a teller. ",
+                  "mitigation": "Unique credentials and Multi-factor Authentication ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -347,13 +409,14 @@
                 "text": "ADMIN"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -437,16 +500,29 @@
               ]
             },
             "id": "0d703784-3c5f-49e8-bdbf-97f11632e5d1",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "ADMIN",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "ce5af964-a8d7-428a-9241-b70fd51c1eea",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 12,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -473,6 +549,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -556,7 +633,6 @@
               ]
             },
             "id": "b1e7a63a-2186-4521-b726-9a5fa192100a",
-            "zIndex": 4,
             "data": {
               "type": "tm.Store",
               "name": "CUSOTMER DATABASE",
@@ -569,7 +645,40 @@
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "d3e90a9d-c5d1-4287-b6f4-315b89173bef",
+                  "title": " threat 21",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Customer PII is accessed without authorization",
+                  "mitigation": "AES-256 encryption, strict access policies",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "9"
+                },
+                {
+                  "id": "f6c443b7-f4e4-4a5a-906e-6a2efc42f5cd",
+                  "title": "threat 22",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": " Customer records are maliciously altered.",
+                  "mitigation": "Change logs, backup validation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -596,6 +705,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -679,7 +789,6 @@
               ]
             },
             "id": "1d67bf03-1162-459b-ac89-58162d4776aa",
-            "zIndex": 5,
             "data": {
               "type": "tm.Store",
               "name": "TRANSACTION LOGS",
@@ -692,7 +801,40 @@
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "aa367a57-0c05-4055-8aaa-c28a8b2fb145",
+                  "title": " threat 23",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Log entries are changed to cover up fraud.",
+                  "mitigation": "hash chaining ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "7"
+                },
+                {
+                  "id": "3e9965e0-b506-42c1-b5e2-9baf8b2d63bd",
+                  "title": " threat 24",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Transactions aren't traceable to a user",
+                  "mitigation": "Log user IDs and timestamps ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "5"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -719,6 +861,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -802,7 +945,6 @@
               ]
             },
             "id": "eecad40d-3463-4154-b0f1-ff4f12e6ef8b",
-            "zIndex": 6,
             "data": {
               "type": "tm.Store",
               "name": "AUDIT LOGS",
@@ -815,7 +957,40 @@
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "85ace561-c0b4-47cb-9857-268ba0841b34",
+                  "title": " threat 25",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Security events are deleted or changed.",
+                  "mitigation": "Immutable logging (WORM), log verification ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "8"
+                },
+                {
+                  "id": "a6c2d06c-6352-47fa-ae01-44d1fb3fb407",
+                  "title": "threat 26",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Logs reveal sensitive information",
+                  "mitigation": "Encryption and log redaction",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": "5"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1347,6 +1522,10 @@
             },
             "vertices": [
               {
+                "x": 350,
+                "y": 280
+              },
+              {
                 "x": 380,
                 "y": 260
               },
@@ -1401,8 +1580,94 @@
             },
             "vertices": [
               {
+                "x": 220,
+                "y": 430
+              },
+              {
                 "x": 790,
                 "y": 590
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS REQUEST",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "HTTPS REQUEST"
+            ],
+            "id": "92c57be7-cd68-4ccd-84f7-198abeb4f571",
+            "source": {
+              "x": 410,
+              "y": 590
+            },
+            "target": {
+              "cell": "4951d47a-b29b-4629-83a3-621d0d11d745",
+              "port": "e0a13739-beb8-4c7d-be05-33400d6c3b79"
+            },
+            "vertices": [
+              {
+                "x": 860,
+                "y": 650
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "032f3b88-2948-4ced-9501-a0080b6aba8a",
+            "source": {
+              "x": 1048,
+              "y": 35
+            },
+            "target": {
+              "x": 1050,
+              "y": 520
+            },
+            "vertices": [
+              {
+                "x": 1048,
+                "y": 330
               }
             ]
           },
@@ -1465,9 +1730,194 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS REQUEST",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "HTTPS REQUEST"
+            ],
+            "id": "c3298ffe-0fb7-4e14-9f51-a0958c177ccf",
+            "source": {
+              "x": 123,
+              "y": 45
+            },
+            "target": {
+              "cell": "5c14b753-ea3b-45b6-a74b-8a9810c64f71",
+              "port": "bafc4101-158a-4667-bc10-47764fc89a2e"
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": 320
+              },
+              {
+                "x": 360,
+                "y": 370
+              },
+              {
+                "x": 360,
+                "y": 390
+              },
+              {
+                "x": 374,
+                "y": 490
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS requests",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "HTTPS requests"
+            ],
+            "id": "28b7d4d2-b100-440d-9801-83afc25a3537",
+            "source": {
+              "cell": "5c14b753-ea3b-45b6-a74b-8a9810c64f71",
+              "port": "f04acb4a-a565-415b-955f-8a5223f2125b"
+            },
+            "target": {
+              "cell": "8992f253-bfbc-43ea-bf40-d02d3bf6130f",
+              "port": "6629be0e-94ed-491e-87cd-39a96306724b"
+            },
+            "vertices": [
+              {
+                "x": 630,
+                "y": 410
+              },
+              {
+                "x": 650,
+                "y": 390
+              },
+              {
+                "x": 760,
+                "y": 330
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS requests",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "0b5481cf-90d6-4a9f-8258-ae84588b81a3",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 31,
+                  "score": ""
+                }
+              ]
+            },
+            "labels": [
+              "HTTPS requests"
+            ],
+            "id": "7f9fb58b-3c40-4583-94e1-425af9a6ff13",
+            "source": {
+              "x": 380,
+              "y": 550
+            },
+            "target": {
+              "cell": "d48e7332-5312-4377-8ea5-43f8f06b0f70",
+              "port": "6629be0e-94ed-491e-87cd-39a96306724b"
+            },
+            "vertices": [
+              {
+                "x": 490,
+                "y": 470
+              }
+            ]
+          },
+          {
             "position": {
-              "x": 400,
-              "y": 210
+              "x": 409,
+              "y": 205.00000000000023
             },
             "size": {
               "width": 320,
@@ -1485,6 +1935,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1568,7 +2019,6 @@
               ]
             },
             "id": "d48e7332-5312-4377-8ea5-43f8f06b0f70",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": " AUTHENTICATION\n SERVICES",
@@ -1593,14 +2043,40 @@
                   "new": false,
                   "number": 1,
                   "score": "9"
+                },
+                {
+                  "id": "bbb8f57f-9167-4055-a242-ce8964f296c2",
+                  "title": " threat 13",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Excessive login attempts crash the service",
+                  "mitigation": "controlling account lockouts ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "4"
+                },
+                {
+                  "id": "bdfb545b-a59b-4a7a-9517-0cf5ea329435",
+                  "title": " threat 14 ",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "no record of log in attempts ",
+                  "mitigation": "log all login events with their User ID and IP address",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "5"
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
-                "repudiation": 0,
+                "repudiation": 1,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
             }
@@ -1626,6 +2102,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1709,7 +2186,6 @@
               ]
             },
             "id": "8992f253-bfbc-43ea-bf40-d02d3bf6130f",
-            "zIndex": 12,
             "data": {
               "type": "tm.Process",
               "name": "API \nGATEWAY",
@@ -1734,14 +2210,40 @@
                   "new": false,
                   "number": 2,
                   "score": "9"
+                },
+                {
+                  "id": "7fdd5d3e-5fd1-4fec-9fd8-3754d4cbd071",
+                  "title": "threat 15",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "API payloads are modified or injected ",
+                  "mitigation": "Secure request validation, API signing",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "8"
+                },
+                {
+                  "id": "bb236371-246c-4f20-9c24-c46d04ae6b44",
+                  "title": " threat 16 ",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "APIs are put under stress as there could be an excessive request ",
+                  "mitigation": "Rate limiting, circuit breaker patterns",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "6"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 0,
+                "tampering": 1,
                 "repudiation": 0,
                 "informationDisclosure": 2,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
             }
@@ -1767,6 +2269,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1850,7 +2353,6 @@
               ]
             },
             "id": "ff6a08a6-ecbf-4bb2-896b-766928c83a05",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
               "name": "TRANSACTIONS",
@@ -1875,13 +2377,39 @@
                   "new": false,
                   "number": 3,
                   "score": "9"
+                },
+                {
+                  "id": "e2c64ab0-4713-4bf9-9ae3-7c0f63c8f31c",
+                  "title": " threat 17 ",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": " User denies initiating a transaction",
+                  "mitigation": "Signed logs, user-confirmed transactions ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "6"
+                },
+                {
+                  "id": "3caadc7d-92b4-4d6b-9947-0af4a6a9e26e",
+                  "title": " threat 18 ",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Unauthorised access to transaction details.",
+                  "mitigation": "Encrypt data in transit and at rest",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "7"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 1,
-                "repudiation": 0,
-                "informationDisclosure": 0,
+                "repudiation": 1,
+                "informationDisclosure": 1,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
@@ -1908,6 +2436,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -1991,7 +2520,6 @@
               ]
             },
             "id": "d527903b-80f8-4a43-aeae-b62e48dc7279",
-            "zIndex": 14,
             "data": {
               "type": "tm.Process",
               "name": "THE \nNOTIFICATIONS",
@@ -2016,23 +2544,365 @@
                   "new": false,
                   "number": 4,
                   "score": "9"
+                },
+                {
+                  "id": "9713d209-4cde-4379-b2a4-39f8522fafc6",
+                  "title": " threat 19",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": " Sensitive content in alerts is leaked",
+                  "mitigation": "Role-based access control for viewing alerts ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "5"
+                },
+                {
+                  "id": "5fc1bced-fbe4-44f7-83ca-7b6d8dbbde8c",
+                  "title": "threat 20",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Alert system is spammed or overloaded.",
+                  "mitigation": "Spam filters, alert thresholds ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "4"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 1,
                 "repudiation": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
+            }
+          },
+          {
+            "position": {
+              "x": 299,
+              "y": 535
             },
-            "tools": {
+            "size": {
+              "width": 110,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "public web\nserver "
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
               "items": [
-                "boundary",
-                "button-remove"
+                {
+                  "group": "top",
+                  "id": "bafc4101-158a-4667-bc10-47764fc89a2e"
+                },
+                {
+                  "group": "right",
+                  "id": "f04acb4a-a565-415b-955f-8a5223f2125b"
+                },
+                {
+                  "group": "bottom",
+                  "id": "029a219a-bbcd-4c88-b302-041b50d5ce52"
+                },
+                {
+                  "group": "left",
+                  "id": "f393831a-fdaf-4a60-854b-317ffdbb84a7"
+                }
+              ]
+            },
+            "id": "5c14b753-ea3b-45b6-a74b-8a9810c64f71",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Process",
+              "name": "public web\nserver ",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "bfcb6dc5-6cc0-4a3f-8aff-fcc923467ba4",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 10,
+                  "score": ""
+                },
+                {
+                  "id": "30d6fb80-9843-404c-b112-858cd0c79dd4",
+                  "title": " threat 29",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "No logs of user interactions or server activity",
+                  "mitigation": "Enable server and application logs with timestamps",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": "5"
+                },
+                {
+                  "id": "46c5a311-3650-4c2d-b6ba-634b70c20d19",
+                  "title": "threat 30",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": " Attacker exploits a vulnerability to execute commands or gain access",
+                  "mitigation": "Server hardening, patching, least privilege on services",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": "8"
+                }
               ],
-              "name": null
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 988,
+              "y": 590
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "public web sever "
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "e574fc38-7548-42eb-8ef9-21c6cd91d3d5"
+                },
+                {
+                  "group": "right",
+                  "id": "5d2656b3-d361-4bff-bb51-2bbf78cbb302"
+                },
+                {
+                  "group": "bottom",
+                  "id": "a64d6934-e575-47aa-983f-3edf04e7e568"
+                },
+                {
+                  "group": "left",
+                  "id": "e0a13739-beb8-4c7d-be05-33400d6c3b79"
+                }
+              ]
+            },
+            "id": "4951d47a-b29b-4629-83a3-621d0d11d745",
+            "zIndex": 16,
+            "data": {
+              "type": "tm.Store",
+              "name": "public web sever ",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "5962a46e-f0b1-43af-bc20-88c994ed3125",
+                  "title": " threat 27 ",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "An attacker mimics the legitimate server",
+                  "mitigation": "Use HTTPS with valid certificates,",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": "8"
+                },
+                {
+                  "id": "503f0be7-77c8-4b50-a686-45ef99120edc",
+                  "title": " threat 28",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Server is flooded with HTTP requests, degrading or halting service.",
+                  "mitigation": "Web Application Firewall (WAF), DDoS protection, rate limiting",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
             }
           }
         ]
@@ -2040,6 +2910,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Eduvos",
-    "threatTop": 4
+    "threatTop": 31
   }
 }
